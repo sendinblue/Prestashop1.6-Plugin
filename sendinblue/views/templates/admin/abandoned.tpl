@@ -1,5 +1,5 @@
 {*
-* 2007-2019 PrestaShop
+* 2007-2020 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,7 +18,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 * @author PrestaShop SA <contact@prestashop.com>
-* @copyright  2007-2019 PrestaShop SA
+* @copyright  2007-2020 PrestaShop SA
 * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 * International Registered Trademark & Property of PrestaShop SA
 *}
@@ -26,7 +26,7 @@
 <table class="table tableblock form-data" style="margin-top:15px;" cellspacing="0"cellpadding="0" width="100%">
         <thead>
         <tr>
-        <th colspan="2">{l s='AbandonedCart tracking' mod='sendinblue'}</th>
+        <th colspan="2">{l s='Abandoned Cart tracking' mod='sendinblue'}</th>
         </tr>
         </thead>
         <tr><td><label>
@@ -37,7 +37,7 @@
         <input type="radio" class="abandonedtracking radio_spaceing2" id="noradio"
         name="abandoned_radio" value="0"{if empty($abandoned_status) || $abandoned_status == 0 || $abandoned_status == 2}checked="checked"{/if}/>{l s='No' mod='sendinblue'}
         <span class="toolTip"
-         title="{l s='Choose Yes if you want to use SendinBlue Abandoned Cart to track your website cart activity' mod='sendinblue'}">
+         title="{l s='Choose Yes if you want to use Sendinblue Abandoned Cart to track your website cart activity' mod='sendinblue'}">
         </span>
         </td></tr>
     <form method="post" name="abandonedform" id="abandonedform" action="{$form_url|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}">

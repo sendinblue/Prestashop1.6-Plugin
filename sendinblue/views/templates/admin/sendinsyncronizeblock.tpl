@@ -1,5 +1,5 @@
 {*
-* 2007-2019 PrestaShop
+* 2007-2020 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,7 +18,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 * @author PrestaShop SA <contact@prestashop.com>
-* @copyright  2007-2019 PrestaShop SA
+* @copyright  2007-2020 PrestaShop SA
 * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 * International Registered Trademark & Property of PrestaShop SA
 *}
@@ -32,12 +32,12 @@
         </thead>
         <tbody><tr>
         <td style="width:250px">
-        <label> {l s='Do you want to add your Prestashop subscribers to your SendinBlue account?' mod='sendinblue'}
+        <label> {l s='Do you want to add your Prestashop subscribers to your Sendinblue account?' mod='sendinblue'}
         </label>
         </td>
         <td class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}"><input type="radio" {if isset($Sendin_Subscribe_Setting) && $Sendin_Subscribe_Setting == 1}checked="checked"{/if} value="1" name="managesubscribe" style="margin-right:10px;" id="managesubscribe" class="managesubscribe">{l s='Yes' mod='sendinblue'}
         <input type="radio" {if isset($Sendin_Subscribe_Setting) && $Sendin_Subscribe_Setting == 0}checked="checked"{/if} value="0" name="managesubscribe" style="margin-left:20px;margin-right:10px;" id="managesubscribe" class="managesubscribe">{l s='No' mod='sendinblue'}
-        <span title="{l s='If you activate this feature, your new contacts will be automatically added to SendinBlue or unsubscribed from SendinBlue. To synchronize the other way (SendinBlue to PrestaShop), you should run the url (mentioned below) each day.' mod='sendinblue'}" class="toolTip">
+        <span title="{l s='If you activate this feature, your new contacts will be automatically added to Sendinblue or unsubscribed from Sendinblue. To synchronize the other way (Sendinblue to PrestaShop), you should run the url (mentioned below) each day.' mod='sendinblue'}" class="toolTip">
         &nbsp;</span>
         </td>
         </tr><tr class="managesubscribeBlock">{$parselist|escape:'quotes':'UTF-8'}</tr>
@@ -53,7 +53,7 @@
     </div>
     <div class="clearfix"></div>
     <div style="display:block;" class="inner_manage_box">
-      <div class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" id="no-templates"> {l s='No confirmation email will be sent after the form is submitted. Subscribers will directly be added to the selected SendinBlue list(s).' mod='sendinblue'}</div>
+      <div class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" id="no-templates"> {l s='No confirmation email will be sent after the form is submitted. Subscribers will directly be added to the selected Sendinblue list(s).' mod='sendinblue'}</div>
     </div>
   </div>
   <div class="form-group manage_subscribe_block">
@@ -63,7 +63,7 @@
     </div>
     <div class="inner_manage_box" {if isset($radio_val_option) && $radio_val_option == "simplemail"} style="display:block;" {/if}> 
       <div class="clearfix"></div>
-      <div class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" id="create-templates"> {l s='A single confirmation email will be sent after the form is submitted. Subscribers will directly be added to the selected SendinBlue list(s).' mod='sendinblue'}</div>
+      <div class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" id="create-templates"> {l s='A single confirmation email will be sent after the form is submitted. Subscribers will directly be added to the selected Sendinblue list(s).' mod='sendinblue'}</div>
       <div class="clearfix"></div>
       <div id="mail-templates"><div style="text-align: left;" class="listData {$cl_version|escape:'htmlall':'UTF-8'|stripslashes} managesubscribeBlock">{$temp_data|escape:'quotes':'UTF-8'}</div></div>
       <div class="clearfix"></div>
@@ -140,7 +140,7 @@
         {/if}
         </td>
         </form>
-        </tr><tr class="managesubscribeBlock"><td class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" colspan="3">{l s='When you want to synchronize your subscribers from your SendinBlue account with your store, you can run this link.' mod='sendinblue'}
+        </tr><tr class="managesubscribeBlock"><td class="{$cl_version|escape:'htmlall':'UTF-8'|stripslashes}" colspan="3">{l s='When you want to synchronize your subscribers from your Sendinblue account with your store, you can run this link.' mod='sendinblue'}
         {$link|escape:'quotes':'UTF-8'} {l s='each day.' mod='sendinblue'}
         <span title="{l s='Note that if you change the name of your Shop (currently' mod='sendinblue'} {$site_name|escape:'htmlall':'UTF-8'}{l s=') the token value changes.' mod='sendinblue'}" class="toolTip">&nbsp;</span>
         </td>
