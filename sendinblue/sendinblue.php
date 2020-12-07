@@ -74,7 +74,7 @@ class Sendinblue extends Module
         $this->name = 'sendinblue';
         $this->tab = 'emailing';
         $this->author = 'Sendinblue';
-        $this->version = '2.8.7';
+        $this->version = '2.8.8';
         $this->module_key = 'fa4c321492032ab1bdeea359aa1e4e3d';
         $this->sib_api_url = 'https://api.sendinblue.com/v2.0';
 
@@ -4540,12 +4540,13 @@ EOT;
         $cart = !empty($params['cart']) ? $params['cart'] : '';
         $cookie = !empty($params['cookie']) ? $params['cookie'] : '';
 
-        if ($this->context->customer->isLogged()) {
-            $email = $this->context->customer->email;
+        $email = '';
+        if ($this->context->customer) {
+            if ($this->context->customer->isLogged()) {
+                $email = $this->context->customer->email;
+            }
         } elseif (!empty($cookie->email)) {
             $email = $cookie->email;
-        } else {
-            $email = '';
         }
 
         if (empty($email) || empty($cart) || empty($cart->id)) {
